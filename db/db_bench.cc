@@ -3021,11 +3021,11 @@ void LoadThenRead(ThreadState *thread){
 
 int main(int argc, char **argv)
 {
-  debug=fopen("/home/hkc/debug.txt","a");
-  check=fopen("/home/hkc/check.txt","a");
-  WarmUp=fopen("/home/hkc/WarmUp.txt","a");
-  fp=fopen("/home/hkc/latency.txt","a");
-  fp1=fopen("/home/hkc/filter.txt","w");
+  debug=fopen("/home/shunzi/debug.txt","a");
+  check=fopen("/home/shunzi/check.txt","a");
+  WarmUp=fopen("/home/shunzi/WarmUp.txt","a");
+  fp=fopen("/home/shunzi/latency.txt","a");
+  fp1=fopen("/home/shunzi/filter.txt","w");
   FLAGS_write_buffer_size = leveldb::Options().write_buffer_size;
   FLAGS_max_file_size = leveldb::Options().max_file_size;
   FLAGS_block_size = leveldb::Options().block_size;
@@ -3038,7 +3038,7 @@ int main(int argc, char **argv)
   
   std::thread BackGround;
 
-  BackGround=std::thread(leveldb::BackGroundLogManager);
+  BackGround=std::thread(leveldb::DBImpl::BackGroundLogManager);
   //BackGround.join();
   BackGround.detach();
 

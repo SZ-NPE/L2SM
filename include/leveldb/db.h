@@ -142,6 +142,8 @@ class DB {
   //    db->CompactRange(NULL, NULL);
   virtual void CompactRange(const Slice* begin, const Slice* end) = 0;
 
+  static int BackGroundLogManager();
+
  private:
   // No copying allowed
   DB(const DB&);

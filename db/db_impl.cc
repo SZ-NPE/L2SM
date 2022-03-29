@@ -519,7 +519,7 @@ void DealWithObsolete(){
   return;
 }
 
-int BackGroundLogManager()
+int DB::BackGroundLogManager()
 {
   int log_level=-1;
   FileMetaData* inputF=NULL;
@@ -606,8 +606,6 @@ int BackGroundLogManager()
   }
   return 1;
 }
-
-
 
 
 //define the timedif file path

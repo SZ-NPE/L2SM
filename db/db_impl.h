@@ -16,7 +16,7 @@
 #include "port/thread_annotations.h"
 
 namespace leveldb {
-int BackGroundLogManager();
+// int BackGroundLogManager();
 class MemTable;
 class TableCache;
 class Version;
@@ -41,6 +41,7 @@ class DBImpl : public DB {
   virtual bool GetProperty(const Slice& property, std::string* value);
   virtual void GetApproximateSizes(const Range* range, int n, uint64_t* sizes);
   virtual void CompactRange(const Slice* begin, const Slice* end);
+  // static int BackGroundLogManager();
 
   // Extra methods (for testing) that are not in the public DB interface
 

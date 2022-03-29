@@ -1,0 +1,3 @@
+out-shared/
+build_config.mk
+out-static/
